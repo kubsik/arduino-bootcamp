@@ -10,7 +10,7 @@
 */
 #include <SPI.h>
 #include <Adafruit_GFX.h>
-#include <Max72xxPanel.h>
+#include <Max72xxPanel.h> // Max7219 Dot Matrix Module
 int pinCS = 10; // Attach CS to this pin, DIN to MOSI and CLK to SCK (cf http://arduino.cc/en/Reference/SPI )
 int matrix_x, matrix_y;
 Max72xxPanel matrix = Max72xxPanel(pinCS, 1, 1);

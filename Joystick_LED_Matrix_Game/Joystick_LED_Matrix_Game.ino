@@ -10,9 +10,9 @@
 
 */
 #include <SPI.h>
-#include <Adafruit_GFX.h>
-#include <Max72xxPanel.h>
-#include <StopWatch.h>
+#include <Adafruit_GFX.h> //https://github.com/adafruit/Adafruit-GFX-Library
+#include <Max72xxPanel.h> //https://github.com/markruys/arduino-Max72xxPanel
+#include <StopWatch.h> //https://github.com/RobTillaart/Arduino/tree/master/libraries/Stopwatch_RT
 
 int pinCS = 10; // Attach CS to this pin, DIN to MOSI and CLK to SCK (cf http://arduino.cc/en/Reference/SPI )
 int numberOfHorizontalDisplays = 1;
@@ -111,9 +111,9 @@ if (input.length() > 0 ) {
   matrix.fillScreen(0);                     // Clear the display before showing the next char
   matrix.drawChar(0,0,input[i],1,0,1);  // Draw a char to the buffer
   matrix.write();                           // Draw the buffer to the display
-  delay(1000);  
-  matrix.fillScreen(0);  
-  matrix.write();  
+  delay(1000);
+  matrix.fillScreen(0);
+  matrix.write();
   delay(20);
  }
 }
@@ -132,7 +132,7 @@ void playGame () {
     matrix.write();
     delay(wait);
     matrix.drawPixel(i, y, LOW);
-    matrix.write();    
+    matrix.write();
     if (collisionOccurred()) {
       Serial.println("Hit");
       return;
@@ -183,8 +183,8 @@ void winner() {
  // drawScrollingText("Win");
  Serial.println("WIN");
   drawText("Win");
-  
-  startGame(); 
+
+  startGame();
 }
 
 //Display game over message
@@ -198,8 +198,8 @@ void gameOver() {
 //Determine if a collision has occured between falling ball and platform
 boolean collisionOccurred() {
   //if falling pixel is above or on the current jostick line, a collision has occurred
-   return ( ((curr_matrix_x == curr_fall_x) || (curr_matrix_x == curr_fall_x+1)) && ((curr_matrix_y == curr_fall_y) 
+   return ( ((curr_matrix_x == curr_fall_x) || (curr_matrix_x == curr_fall_x+1)) && ((curr_matrix_y == curr_fall_y)
             || (curr_matrix_y+1 == curr_fall_y) ||
-            (curr_matrix_y-1 == curr_fall_y) )) ;            
+            (curr_matrix_y-1 == curr_fall_y) )) ;
 }
 
