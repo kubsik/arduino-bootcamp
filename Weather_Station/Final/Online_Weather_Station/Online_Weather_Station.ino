@@ -1,6 +1,6 @@
 /*
   Retreive Weather From Weather Underground
-
+  // https://docs.arduino.cc/retired/shields/arduino-wifi-shield
   This sketch connects to the Weather Underground API to make a request
   using an Arduino Wifi shield. The result is displayed on an LCD display.
   

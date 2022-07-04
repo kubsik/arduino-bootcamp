@@ -1,6 +1,6 @@
 /*
   Arduino Bootcamp
-
+  // https://docs.arduino.cc/retired/shields/arduino-wifi-shield
   - Online Weather Station - Using the Arduino Wifi shield to retrieve weather from Weather Underground
 
   This sketch connects to the Weather Underground API to make a request

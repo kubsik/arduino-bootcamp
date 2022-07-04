@@ -14,7 +14,7 @@
  */
 
 #include <Wire.h>
-#include <ArduinoNunchuk.h>
+#include <ArduinoNunchuk.h> // https://github.com/GabrielBianconi/arduino-nunchuk
 
 #define BAUDRATE 19200
 
